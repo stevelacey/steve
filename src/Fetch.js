@@ -1,6 +1,6 @@
-import React from 'react'
+import { Component } from 'react'
 
-class Fetch extends React.Component {
+class Fetch extends Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +10,7 @@ class Fetch extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8000/' + this.props.url)
+    fetch('https://api.steve.ly/' + this.props.url)
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }
